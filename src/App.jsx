@@ -1,8 +1,12 @@
+import Header from "./components/Header";
+import Timer from "./components/Timer";
+
 function App() {
   return (
-    <>
-      <h1 className="text-4xl">Timer Tide</h1>
-    </>
+    <div className="max-w-screen-sm w-full m-auto p-4">
+      <Header />
+      <Timer />
+    </div>
   );
 }
 
