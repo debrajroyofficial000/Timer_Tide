@@ -13,7 +13,7 @@ function Timer() {
     { id: "short break", active: false, name: "short break" },
     { id: "long break", active: false, name: "long break" },
   ]);
-
+  const [play] = useSound(notification);
   useEffect(() => {
     if (bgColor === "work") document.body.style.backgroundColor = "#4F6F52";
     else if (bgColor === "short break")
@@ -25,9 +25,9 @@ function Timer() {
         if (second === 0) {
           if (minute > 0) {
             setMinute((minute) => minute - 1);
-            setSecond((second) => (second = 59));
+            setSecond(59);
           } else {
-            useSound(notification);
+            play();
             setIsActive(false);
           }
         } else {
