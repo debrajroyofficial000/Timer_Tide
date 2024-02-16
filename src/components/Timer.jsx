@@ -58,7 +58,7 @@ function Timer() {
         break;
       }
       case "short break": {
-        setMinute(15);
+        setMinute(5);
         setSecond(0);
         setIsActive(false);
         setBgColor("short break");
